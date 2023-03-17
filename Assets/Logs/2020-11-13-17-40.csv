@@ -1,0 +1,2 @@
+Frame;CaptureTime;LogTime;HMDPosition;HMDRotation;GazeStatus;CombinedGazeForward;CombinedGazePosition;LeftEyeStatus;LeftEyeForward;LeftEyePosition;LeftEyePupilSize;RightEyeStatus;RightEyeForward;RightEyePosition;RightEyePupilSize;FocusDistance;FocusStability
+1299059;1000013074376758200;63740886032555;(-0.001, 1.601, -0.001);(-0.005, 359.992, 359.990);INVALID;;;INVALID;;;;INVALID;;;;;
