@@ -6,4 +6,4 @@ Related to: https://github.com/Thomahawkuru/cartesian_panda
 2020.3.30f1
 
 ## WARNING
-This project is built upon the depricated open XR plugin by Varjo. This plug is only supported up untill Varjo Base 3.9. Functionality is broken with the update to 3.10
+This project is built upon the legacy open XR plugin by Varjo. This plug is depricated and only worked untill Varjo Base 3.9. Functionality is broken with the update to 3.10
