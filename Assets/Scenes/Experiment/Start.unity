@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subjectID: 100
   Handedness: 0
-  Condition: 1
+  Condition: 3
   Timer: 60
   DataPath: C:\Users\thoma\Documents\Unity\Panda-manipulation\Data\Experiment\
   A: {fileID: 102900000, guid: 3624696ac23bcf9488d8012ba4f5e3a7, type: 3}
