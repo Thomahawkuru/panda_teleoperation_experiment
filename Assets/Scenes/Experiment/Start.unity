@@ -168,10 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subjectID: 100
   Handedness: 0
-  Condition: 3
+  Condition: 0
   Timer: 60
   DataPath: C:\Users\thoma\Documents\Unity\Panda-manipulation\Data\Experiment\
-  A: {fileID: 102900000, guid: 3624696ac23bcf9488d8012ba4f5e3a7, type: 3}
+  A: {fileID: 102900000, guid: 453fd54236579bc43b28a6b72a7cba7d, type: 3}
   B: {fileID: 102900000, guid: 3e428aac1ffce0d418e87fc874829dca, type: 3}
   C: {fileID: 102900000, guid: 3d162b1595dbfbe448efb0a82c97881d, type: 3}
   D: {fileID: 102900000, guid: 6d62e14c95667b94ea5dd813b1cc7c66, type: 3}
