@@ -5227,7 +5227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 919349058}
   - component: {fileID: 919349060}
-  - component: {fileID: 919349057}
   - component: {fileID: 919349055}
   m_Layer: 0
   m_Name: Experiment Manager
@@ -5249,20 +5248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPS: 60
---- !u!114 &919349057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919349054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775d1a6d1cb256f46bd6343cc51a74dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oneGazeDataPerFrame: 1
-  startAutomatically: 0
 --- !u!4 &919349058
 Transform:
   m_ObjectHideFlags: 0
@@ -5670,7 +5655,7 @@ MonoBehaviour:
   NeedNewFrameGrab: 0
   streamInputIP: 192.168.1.1
   streamInputPort: 30000
-  enableTracking: 0
+  enableTracking: 1
   enableSpatialMemory: 0
   pathSpatialMemory: 
   estimateInitialPosition: 0
