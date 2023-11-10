@@ -681,7 +681,7 @@ public class ZEDManager : MonoBehaviour
     /// </summary>
     [HideInInspector]
     public bool needRecordFrame = false;
-    public KeyCode toggleLoggingKey = Logger.toggleLoggingKey;
+    public KeyCode toggleLoggingKey = LogPrepper.toggleLoggingKey;
     public KeyCode toggleCountdownKey = Countdown.ToggleCountdown;
     private string subjectDataFolder;
     private string Scene;
