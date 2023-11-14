@@ -11,46 +11,18 @@ using UnityEditor.PackageManager.Requests;
 
 
 /// <summary>
-/// Manages the various compiler defines that the ZED Unity plugin uses to enable and disable features that are dependent on specific packages.
-/// This includes the SteamVR and Oculus plugins (for controller interaction) and OpenCV for Unity (for ArUco detection).
+/// Manages the various compiler defines that the ZED Unity plugin uses to enable and disable features that are dependent on specific packages. 
+/// This includes the SteamVR and Oculus plugins (for controller interaction) and OpenCV for Unity (for ArUco detection). 
 /// </summary>
 [InitializeOnLoad]
 public class ZEDDefineHandler : AssetPostprocessor
 {
     static ZEDDefineHandler()
-    {
+    {  
     }
 
     static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
     {
-#region VR Plugins
-        if (CheckPackageExists("OVRManager"))
-        {
-            ActivateDefine("Oculus", "ZED_OCULUS");
-        }
-        else
-        {
-            DeactivateDefine("Oculus", "ZED_OCULUS");
-        }
-
-        if (CheckPackageExists("SteamVR_Camera")) //"OpenVR" and "SteamVR" exist in script names in the Oculus plugin.
-        {
-            ActivateDefine("SteamVR", "ZED_STEAM_VR");
-        }
-        else
-        {
-            DeactivateDefine("SteamVR", "ZED_STEAM_VR");
-        }
-
-        if (CheckPackageExists("SteamVR_Input_Sources"))
-        {
-            ActivateDefine("SteamVR_2_0_Input", "ZED_SVR_2_0_INPUT");
-        }
-        else
-        {
-            DeactivateDefine("SteamVR_2_0_Input", "ZED_SVR_2_0_INPUT");
-        }
-#endregion
 
 #region OpenCV
         string opencvfilename = "opencvforunity.dll";
@@ -107,23 +79,6 @@ public class ZEDDefineHandler : AssetPostprocessor
         }
         PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone, defines);
 
-        // FOR OCULUS QUEST
-        string defines_android = PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android);
-        if (defines_android.Length != 0)
-        {
-            if (!defines_android.Contains(defineName))
-            {
-                defines_android += ";" + defineName;
-            }
-        }
-        else
-        {
-            if (!defines_android.Contains(defineName))
-            {
-                defines_android += defineName;
-            }
-        }
-        PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, defines_android);
     }
 
     /// <summary>
