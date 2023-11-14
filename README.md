@@ -7,7 +7,7 @@ Related to: https://github.com/Thomahawkuru/cartesian_panda
 ## Unity Version
 2020.3.30f1
 
-## ZED unity Plugin
+## ZED sdk
 Updated to work with SDK 4.0
 
 ## WARNING
