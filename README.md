@@ -1,6 +1,6 @@
 ### This is a demonstrator branch
 
-# panda_teleoperation_experiment
+# panda_teleoperation
 Unity project to run a teleoperation experiment using panda robot. 
 Related to: https://github.com/Thomahawkuru/cartesian_panda
 
