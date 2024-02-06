@@ -6,17 +6,17 @@ using System;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class PoscmdPublisher : UnityPublisher<MessageTypes.Geometry.PoseStamped>
+    public class PoscmdPublisherDirect : UnityPublisher<MessageTypes.Geometry.PoseStamped>
     {
         Controller controller;
         //public Transform LeapTracker;
         public Transform handtransform;
-        /*        public Transform Lindex;
-                public Transform Lthumb;*/
-        public Transform Lpalm;
-        /*        public Transform Rindex;
-                public Transform Rthumb;*/
-        public Transform Rpalm;
+        public Transform Lindex;
+        public Transform Lthumb;
+        public Transform Lrot;
+        public Transform Rindex;
+        public Transform Rthumb;
+        public Transform Rrot;
         public Transform Base;
         public Transform Panda;
 
@@ -60,8 +60,8 @@ namespace RosSharp.RosBridgeClient
             Hand = LogPrepper.Hand;
             controller = new Controller();
 
-            if (Hand == "R") { LeapHand = Rpalm; }
-            if (Hand == "L") { LeapHand = Lpalm; }
+            if (Hand == "R") { LeapHand = Rrot; }
+            if (Hand == "L") { LeapHand = Lrot; }
 
             if (LogPrepper.handedness == HandEnum.L)
             {
@@ -93,17 +93,18 @@ namespace RosSharp.RosBridgeClient
                     if ((hand.IsRight) && (Hand == "R"))
                     {
                         tracked = true;
-                        //Rhand = Rpalm;
-                        handtransform.position = Rpalm.position;
-                        handtransform.rotation = Rpalm.rotation;
+                        //Rhand = Rrot;
+                        handtransform.position = (Rindex.position + Rthumb.position) / 2f;
+                        handtransform.rotation = Rrot.rotation;
+                        //Quaternion.Slerp(Rindex.rotation, Rthumb.rotation, 0.5f);
                         CheckInput(handtransform, Base.position, "R");
                     }
                     else if ((hand.IsLeft) && (Hand == "L"))
                     {
                         tracked = true;
-                        //Lhand = Lpalm;
-                        handtransform.position = Lpalm.position;
-                        handtransform.rotation = Lpalm.rotation;
+                        //Lhand = Lrot;
+                        handtransform.position = (Lindex.position + Lthumb.position) / 2f;
+                        handtransform.rotation = Lrot.rotation;
                         CheckInput(handtransform, Base.position, "L");
                     }
                     else { Controlling = false; tracked = false; }

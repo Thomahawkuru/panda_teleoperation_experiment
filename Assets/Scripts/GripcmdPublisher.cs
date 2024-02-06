@@ -46,7 +46,7 @@ namespace RosSharp.RosBridgeClient
                     {
                         grip = hand.GrabStrength;
                         pinch = hand.PinchStrength;
-                        //Debug.Log(R_grip);
+                        //Debug.Log(grip);
 
                         if (CMDType.ToString() == "gripping")
                         {
