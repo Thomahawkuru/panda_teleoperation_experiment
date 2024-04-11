@@ -1718,7 +1718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271457452}
   m_LocalRotation: {x: 0.00011422823, y: 0.99987626, z: -0.013089084, w: 0.008725904}
-  m_LocalPosition: {x: -0.0181, y: -0.087, z: 0.2537}
+  m_LocalPosition: {x: -0.072, y: -0.081, z: 0.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1015571282}
@@ -5593,7 +5593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraID: 0
   depthMode: 3
-  inputType: 0
+  inputType: 2
   resolution: 1
   FPS: 30
   serialNumber: 0
@@ -7215,7 +7215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355434468}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.041, y: 0.036, z: 2.21}
+  m_LocalPosition: {x: -0.041, y: 0.036, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1318438625}
